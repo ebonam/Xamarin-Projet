@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Vue.AvecFraisConfirmation">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Demande de mission sans frais"></Label>
+            <StackLayout Orientation="Horizontal"  >
+                <StackLayout HorizontalOptions="FillAndExpand" >
+                    <Button Text="Annuler" Clicked="AnnulerF"></Button>
+                </StackLayout >
+                <StackLayout HorizontalOptions="FillAndExpand"  >
+                    <Button Text="Valider" Clicked="ValiderF"></Button>
+                </StackLayout >
+
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label></Label>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label HorizontalOptions="FillAndExpand">Aller :</Label>
+                            <Button Text="Afficher" x:name="Expand1" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                            <Entry  HorizontalOptions="FillAndExpand" x:Name="Lieu"></Entry>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                            <DatePicker HorizontalOptions="FillAndExpand"  x:Name="DateDep"></DatePicker>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                            <TimePicker HorizontalOptions="FillAndExpand"  x:Name="HeureDep"></TimePicker>
+                        </StackLayout>
+
+                        <Label HorizontalOptions="FillAndExpand">Arrivé:</Label>
+                        <Label HorizontalOptions="FillAndExpand"></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                            <Entry  x:Name="LieuArr" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                            <DatePicker  x:Name="DateArr" HorizontalOptions="FillAndExpand"></DatePicker>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout  Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                            <TimePicker  x:Name="HeureArr" HorizontalOptions="FillAndExpand"></TimePicker>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand">Retour identique a l'aller?</Label>
+                        <Button x:Name="isSAmeTrajet" HorizontalOptions="FillAndExpand" Text="Match"></Button>
+                        <Label></Label>
+                    </StackLayout>
+                    <Label></Label>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="Add" Text="Ajouter" HorizontalOptions="FillAndExpand"></Button>
+                        <Button x:Name="Del" Text="Supprimer Ligne " HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+
+                    <ListView x:Name="listView"  >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+                                        <Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" ></Label>
+                               
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+
+
+
+
+
+                    <Button Text="Voir Trajet" Clicked="VoirTrajet"></Button>
+                    <Label/>
+
+
+                    <StackLayout x:Name="Retour" IsVisible="True">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label HorizontalOptions="FillAndExpand">Retour:</Label>
+                            <Button Text="Afficher" x:name="Expand1" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+
+                        <Label HorizontalOptions="FillAndExpand">Depart:</Label>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                            <Entry  HorizontalOptions="FillAndExpand" x:Name="Lieu1"></Entry>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                            <DatePicker HorizontalOptions="FillAndExpand"  x:Name="DateDep1"></DatePicker>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                            <TimePicker HorizontalOptions="FillAndExpand"  x:Name="HeureDep1"></TimePicker>
+                        </StackLayout>
+
+                        <Label HorizontalOptions="FillAndExpand">Retour:</Label>
+                        <Label HorizontalOptions="FillAndExpand"></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                            <Entry  x:Name="LieuArr1" HorizontalOptions="FillAndExpand"></Entry>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                            <DatePicker  x:Name="DateArr1" HorizontalOptions="FillAndExpand"></DatePicker>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout  Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                            <TimePicker  x:Name="HeureArr1" HorizontalOptions="FillAndExpand"></TimePicker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Button x:Name="Add2" Text="Ajouter"></Button>
+                            <Button x:Name="Del2" Text="Supprimer Ligne"></Button>
+                        </StackLayout>
+                        <!-- ItemSelected="OnItemSelected"-->
+                        <ListView x:Name="listView3" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+                                            <Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" ></Label>
+                                            <Label   ></Label>
+                                            <!--   <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+                                            <Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" />
+                                            <Label Text="Label 2" VerticalTextAlignment="Center" FontSize="Small" />
+                                        </StackLayout>
+                                        <Button Text="X" BackgroundColor="Gray" HorizontalOptions="EndAndExpand" CommandParameter="{Binding .}" Clicked="OnCellClicked" />
+                                  -->
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </StackLayout>
+                    <Button Text="Voir Trajet" Clicked="VoirTrajet2"></Button>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

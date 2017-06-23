@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Vue.AvecFrais1">
+
+    <StackLayout>
+        <StackLayout>
+            <Label Text="Demande de mission sans frais"></Label>
+            <StackLayout Orientation="Horizontal"  >
+                <StackLayout HorizontalOptions="FillAndExpand" >
+                    <Button Text="Annuler" Clicked="AnnulerF"></Button>
+                </StackLayout >
+                <StackLayout HorizontalOptions="FillAndExpand"  >
+                    <Button Text="Valider" Clicked="ValiderF"></Button>
+                </StackLayout >
+
+                <ScrollView>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand" >Vehicule?</Label>
+                        <Switch HorizontalOptions="FillAndExpand" x:Name="Vehicule"></Switch>
+
+                    </StackLayout>
+                    <StackLayout x:Name="VehiculeLayout">
+                        <Picker x:Name="VehiculePicker" SelectedIndex="{Binding VehiculeIndex}" HorizontalOptions="FillAndExpand">
+                            <Picker.Items>
+                                <x:String>"Vehicule Personnel"</x:String>
+                                <x:String>"Vehicule de Service"</x:String>
+                                <x:String>"Covoiturage</x:String>
+                                <x:String>"Vehicule de Location"</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand" Text="Train"></Label>
+                        <Switch HorizontalOptions="FillAndExpand" x:Name="Train"></Switch>
+
+
+                    </StackLayout>
+                    <StackLayout x:Name="TrainLayout">
+                        <Picker x:Name="TrainPicker" SelectedIndex="{Binding VehiculeIndex}" HorizontalOptions="FillAndExpand">
+                            <Picker.Items>
+                                <x:String>"1er classe"</x:String>
+                                <x:String>"2nd classe"</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                    </StackLayout>
+
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

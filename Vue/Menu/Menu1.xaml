@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Vue.Menu1"
+                 xmlns:pages="clr-namespace:XamarinFinal.Vue"> <!--;"éassembly=XamarinFinal.Vue"-->
+    <MasterDetailPage.Master>
+        <pages:Menu1Master Title="Braw" x:Name="MasterPage" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:Menu1Detail />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

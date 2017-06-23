@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Vue.SansFrais1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Demande de mission sans frais"></Label>
+            <StackLayout Orientation="Horizontal"  >
+                <StackLayout HorizontalOptions="FillAndExpand" >
+                    <Button Text="Annuler" Clicked="AnnulerF"></Button>
+                </StackLayout >
+                <StackLayout HorizontalOptions="FillAndExpand"  >
+                    <Button Text="Valider" Clicked="ValiderF"></Button>
+                </StackLayout >
+
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand">Ordre de mission:</Label>
+                        <Entry  x:Name="OM" HorizontalOptions="FillAndExpand"></Entry>
+                    </StackLayout>
+                    <Label></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand">Motif :</Label>
+                        <Entry  x:Name="Motif" HorizontalOptions="FillAndExpand"></Entry>
+                    </StackLayout>
+                    <Label></Label>
+
+
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label HorizontalOptions="FillAndExpand">Aller :</Label>
+                            <Button Text="Afficher" Clicked="Spoiler" x:name="Expand1" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                        <Label></Label>
+                        <StackLayout x:Name="_Spoiler1L">
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                                <Entry  HorizontalOptions="FillAndExpand" x:Name="Lieu"></Entry>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                                <DatePicker HorizontalOptions="FillAndExpand"  x:Name="DateDep"></DatePicker>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                                <TimePicker HorizontalOptions="FillAndExpand"  x:Name="HeureDep"></TimePicker>
+                            </StackLayout>
+
+                            <Label HorizontalOptions="FillAndExpand">Arrivé:</Label>
+                            <Label HorizontalOptions="FillAndExpand"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                                <Entry  x:Name="LieuArr" HorizontalOptions="FillAndExpand"></Entry>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                                <DatePicker  x:Name="DateArr" HorizontalOptions="FillAndExpand"></DatePicker>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout  Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                                <TimePicker  x:Name="HeureArr" HorizontalOptions="FillAndExpand"></TimePicker>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    
+                    <Button Text="Voir Trajet" Clicked="VoirTrajet"></Button>
+                    <Label/>
+
+
+                    <StackLayout x:Name="Retour" IsVisible="True">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label HorizontalOptions="FillAndExpand">Retour:</Label>
+                            <Button Text="Afficher" Clicked="Spoiler1" x:name="Expand1" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                        <StackLayout x:Name="_Spoiler2L">
+
+                            <Label HorizontalOptions="FillAndExpand">Depart:</Label>
+                            <Label></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                                <Entry  HorizontalOptions="FillAndExpand" x:Name="Lieu1"></Entry>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                                <DatePicker HorizontalOptions="FillAndExpand"  x:Name="DateDep1"></DatePicker>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                                <TimePicker HorizontalOptions="FillAndExpand"  x:Name="HeureDep1"></TimePicker>
+                            </StackLayout>
+
+                            <Label HorizontalOptions="FillAndExpand">Retour:</Label>
+                            <Label HorizontalOptions="FillAndExpand"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Lieu:</Label>
+                                <Entry  x:Name="LieuArr1" HorizontalOptions="FillAndExpand"></Entry>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Date:</Label>
+                                <DatePicker  x:Name="DateArr1" HorizontalOptions="FillAndExpand"></DatePicker>
+                            </StackLayout>
+                            <Label></Label>
+                            <StackLayout  Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Heure:</Label>
+                                <TimePicker  x:Name="HeureArr1" HorizontalOptions="FillAndExpand"></TimePicker>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button Text="Voir Trajet" Clicked="VoirTrajet2"></Button>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

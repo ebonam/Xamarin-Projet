@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Vue.Test">
+
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal"  >
+                <StackLayout HorizontalOptions="FillAndExpand" >
+                    <Button Text="Annuler" Clicked="AnnulerFct"></Button>
+                </StackLayout >
+                <StackLayout HorizontalOptions="FillAndExpand"  >
+                    <Button Text="Valider" Clicked="ValiderFct"></Button>
+                </StackLayout  >
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <!--      <RadioButton GroupName="genre" Padding="0,0,40,0">Homme</RadioButton>
+      <RadioButton GroupName="genre" Padding="0,0,0,0">Femme</RadioButton> !-->
+                <Switch x:Name="Homme">Homme?</Switch>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand" >Nom</Label>
+                        <Entry HorizontalOptions="FillAndExpand"   Placeholder="Nom" x:Name="Nom" ></Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand">Prenom</Label>
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Prenom" x:Name="prenom" ></Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand">N° de telephone</Label>
+                        <Entry HorizontalOptions="FillAndExpand" Keyboard="Telephone"  Placeholder="0123456789" x:Name="numTel"></Entry>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand">Mail</Label>
+                        <Entry HorizontalOptions="FillAndExpand" Keyboard="Email" Placeholder="mail@example.fr" x:Name="Mail"></Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand">Addresse</Label>
+                        <Entry HorizontalOptions="FillAndExpand" x:Name="Addresse"></Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand" >Personnel de l'uvhc?</Label>
+                        <Switch HorizontalOptions="FillAndExpand" x:Name="PersoUVHC"></Switch>
+                        <!--<CheckBox IsChecked="True"></CheckBox> -->
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout x:Name="ContaineurUVHC" IsVisible="False">
+                            <!--Conteneur -->
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Grade</Label>
+                                <Entry HorizontalOptions="FillAndExpand"  Placeholder="Grade" x:Name="Grade"></Entry>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand">Nom de la composante</Label>
+                                <Entry HorizontalOptions="FillAndExpand" x:Name="NomComposante"></Entry>
+                            </StackLayout>
+
+                        </StackLayout>
+                        <StackLayout x:Name="ContaineurNonUVHC" IsVisible="False">
+                            <!-- Conteneur-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="FillAndExpand" >Fonctionnaire</Label>
+                                <Switch x:Name="Fonctionnaire"></Switch>
+                                <!-- <CheckBox></CheckBox> -->
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" x:Name="FonctionnaireCont">
+                                <!-- Conteneur fonctionnaire-->
+                                <Label HorizontalOptions="FillAndExpand">Etablissement</Label>
+                                <Entry HorizontalOptions="FillAndExpand" x:Name="Etablissement"></Entry>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label  HorizontalOptions="FillAndExpand">Date de naissance</Label>
+                            <DatePicker HorizontalOptions="FillAndExpand" x:Name="DateNaissance"></DatePicker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand">Lieu de naissance</Label>
+                            <Entry HorizontalOptions="FillAndExpand" x:Name="LieuNaissance"></Entry>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+</ContentPage>

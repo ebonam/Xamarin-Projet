@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Vue.ParMail">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Button HorizontalOptions="FillAndExpand" Text="Annuler"></Button>
+                <Button HorizontalOptions="FillAndExpand"  Text="Envoyer"></Button>
+            </StackLayout>
+
+            <Label></Label>
+            <Label Text="Envoyer la fiche :" />
+            <Label></Label>
+         
+                <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="FillAndExpand">A: </Label>
+                    <Entry HorizontalOptions="FillAndExpand"  Placeholder="exemple@exemple.com" x:Name="Destination"></Entry>
+                </StackLayout>
+            <Label></Label>
+            <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="FillAndExpand">Sujet : </Label>
+                <Entry HorizontalOptions="FillAndExpand"  Placeholder="Sujet" x:Name="Subject"></Entry>
+            </StackLayout>
+            <Label></Label>
+
+            <StackLayout x:Name="Fiche">
+            <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="FillAndExpand">Envoyer avant mission</Label>
+                <Switch HorizontalOptions="FillAndExpand"   x:Name="Avantmission"></Switch>
+            </StackLayout>
+
+            <Label></Label>
+            <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="FillAndExpand">Envoyer avant mission</Label>
+                <Switch HorizontalOptions="FillAndExpand" x:Name="apresmission"></Switch>
+            </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

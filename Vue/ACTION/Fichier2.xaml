@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Vue.FICHES.Fichier2">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Label></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Button HorizontalOptions="FillAndExpand" Text="Annuler" Clicked="Button_Cancel"></Button>
+                        <Button HorizontalOptions="FillAndExpand"  Text="Nouveau" Clicked="Button_Create"></Button>
+                    </StackLayout>
+                    <Label></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Nom de la fiche" HorizontalOptions="FillAndExpand" />
+                        <Entry HorizontalOptions="FillAndExpand" x:Name="FileName"></Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Type de fiche ?" ></Label>
+                        <Picker x:Name="_Picker"   SelectedIndex="1" HorizontalOptions="FillAndExpand">
+                            <Picker.Items>
+                                <x:String>Avec Frais</x:String>
+                                <x:String>Sans Frais</x:String>
+                                <x:String>DAUVP</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button HorizontalOptions="FillAndExpand" Text="Supprimer" Clicked="Button_Supprimer"></Button>
+                        <Button HorizontalOptions="FillAndExpand"  Text="Ouvrir" Clicked="Button_Open"></Button>
+                    </StackLayout>
+                    <ListView x:Name="listView" ItemSelected="OnItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+                                        <Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" ></Label>
+                                        <Label   ></Label>
+                                        <!--   <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+                                            <Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" />
+                                            <Label Text="Label 2" VerticalTextAlignment="Center" FontSize="Small" />
+                                        </StackLayout>
+                                        <Button Text="X" BackgroundColor="Gray" HorizontalOptions="EndAndExpand" CommandParameter="{Binding .}" Clicked="OnCellClicked" />
+                                  -->
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

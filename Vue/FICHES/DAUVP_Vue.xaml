@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="XamarinFinal.Vue.DAUVP_Vue">
+
+    <StackLayout>
+        <Label></Label>
+        <Label>Demande d'autorisation d'utilisation de vehicule personnel</Label>
+        <StackLayout Orientation="Horizontal"  >
+        <StackLayout HorizontalOptions="FillAndExpand" >
+            <Button Text="Annuler" Clicked="AnnulerF"></Button>
+        </StackLayout >
+        <StackLayout HorizontalOptions="FillAndExpand"  >
+            <Button Text="Valider" Clicked="ValiderF"></Button>
+        </StackLayout  >
+        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Veuillez indiquer les differentes informations:"></Label>
+                <Label Text="       "></Label>
+                <Label Text="Sur le Vehicule :"></Label>
+                <Label Text="       "></Label>
+                <StackLayout  Orientation="Horizontal">
+                    <Label Text="Marque du Vehicule:"/>
+                    <Picker x:Name="_MarquePicker"   SelectedIndex="1" HorizontalOptions="FillAndExpand">
+                        <Picker.Items>
+                            <x:String>1er classe</x:String>
+                            <x:String>2nd class</x:String>
+                            <x:String>1er classe</x:String>
+                            <x:String>2nd classe</x:String>
+                            <x:String>1er classe</x:String>
+                            <x:String>2nd classe</x:String>
+                            <x:String>1er classe</x:String>
+                            <x:String>2nd classe</x:String>
+                            <x:String>1er classe</x:String>
+                            <x:String>"2nd classe"</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <Label Text=" "></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Immatriculation :"/>
+                    <Entry HorizontalOptions="FillAndExpand" x:Name="_Immatriculation"></Entry>
+                </StackLayout>
+                <Label Text=" "></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Puissance fiscale :"/>
+                    <Entry HorizontalOptions="FillAndExpand" Keyboard="Numeric" x:Name="_CV"/>
+                </StackLayout>
+                <Label Text=" "></Label>
+                <Label Text="Sur l'assurance :"></Label>
+                <Label Text=" "></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nom de l'assureur :"/>
+                    <Entry HorizontalOptions="FillAndExpand" x:Name="_NomAssureur"/>
+                </StackLayout>
+                <Label Text=" "></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Police n°:"/>
+                    <Entry HorizontalOptions="FillAndExpand"  x:Name="_PoliceN"/>
+                </StackLayout>
+                <Label Text=" "></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Addresse de l'agence :"/>
+                    <Entry HorizontalOptions="FillAndExpand"  x:Name="_AddresseAgence"/>
+                </StackLayout>
+                <Label Text=" "></Label>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
